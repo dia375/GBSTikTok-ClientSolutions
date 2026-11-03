@@ -1,0 +1,192 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Dia Wagle for TikTok Client Solutions</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap">
+<style>
+/* Layout: short-video app feel. Black screen, white type, cyan and pink used only as an offset "glitch" on the headline and thin accents. Stacked dark cards. Single dark look by choice. */
+:root{
+  --bg:#000000;
+  --card:#121212;
+  --card-2:#1a1a1a;
+  --line:#2a2a2a;
+  --ink:#ffffff;
+  --muted:#a1a1a1;
+  --cyan:#25f4ee;
+  --pink:#fe2c55;
+  --sans:"Inter Tight","Helvetica Neue",Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+h1,h2,h3{margin:0;text-wrap:balance;letter-spacing:-.03em;font-weight:800}
+p{margin:0;max-width:62ch}
+.label{font-size:13px;font-weight:600;color:var(--muted);margin:0;letter-spacing:.02em}
+
+/* hero */
+.hero{padding-block:72px 48px;display:grid;gap:22px}
+.hero h1{font-size:clamp(48px,9.4vw,116px);line-height:.9;font-weight:900}
+.hero .lede{font-size:19px;color:#d4d4d4}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;background:var(--card-2);color:var(--ink);border:1px solid var(--line)}
+.chip.key{border-color:var(--pink)}
+
+section{padding-block:44px;display:grid;gap:22px;border-top:1px solid var(--line)}
+section h2{font-size:clamp(30px,4.6vw,48px);line-height:1}
+
+/* numbers */
+.nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.num{background:var(--card);border-radius:20px;padding:22px;display:grid;gap:8px;min-width:0;border-bottom:3px solid var(--cyan)}
+.num:nth-child(even){border-bottom-color:var(--pink)}
+.num strong{font-size:clamp(34px,4.4vw,48px);line-height:1;font-weight:900;letter-spacing:-.03em}
+.num span{font-size:14px;color:var(--muted)}
+
+/* idea */
+.big-idea{background:var(--ink);color:var(--bg);border-radius:28px;padding:34px;display:grid;gap:12px;position:relative;overflow:hidden}
+.big-idea::before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:linear-gradient(var(--cyan),var(--pink))}
+.big-idea .label{color:#555}
+.big-idea h3{font-size:clamp(28px,4.2vw,46px);line-height:1.02}
+.big-idea p{font-size:18px;color:#2a2a2a}
+.plan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.step{background:var(--card);border-radius:20px;padding:24px;display:grid;gap:10px;align-content:start;min-width:0}
+.step .label{color:var(--cyan)}
+.step:nth-child(2) .label{color:var(--pink)}
+.step h3{font-size:21px}
+.step ul{margin:0;padding-left:18px;display:grid;gap:6px;color:var(--muted);font-size:15px}
+.measure{display:flex;flex-wrap:wrap;gap:8px}
+.measure span{font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;background:var(--card-2);color:var(--ink);border:1px solid var(--line)}
+
+/* why me */
+.why{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.card{background:var(--card);border-radius:20px;padding:24px;display:grid;gap:10px;align-content:start;min-width:0}
+.card h3{font-size:21px}
+.card p{color:var(--muted);font-size:15px}
+.card .proof{font-size:13px;font-weight:600;color:var(--ink);padding-top:10px;border-top:1px solid var(--line)}
+
+/* footer */
+footer{margin-block:24px 56px;background:var(--card);border-radius:28px;padding:32px;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+footer h2{font-size:clamp(28px,4.2vw,44px)}
+.contact{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;font-size:15px;font-weight:500}
+.contact span{user-select:all}
+button{font:inherit;font-weight:700;font-size:15px;border:0;border-radius:6px;padding:13px 24px;background:var(--pink);color:var(--ink);cursor:pointer;transition:transform .2s}
+button:hover{transform:translateY(-2px)}
+button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+
+@media (prefers-reduced-motion:reduce){button{transition:none}}
+@media (max-width:880px){
+  .nums{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .plan,.why{grid-template-columns:1fr}
+}
+</style>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="label">Scaled Client Solutions Specialist Graduate · GBS · London</p>
+    <h1>Dia Wagle.<br>Data meets creative.</h1>
+    <p class="lede">I help clients get more from what they spend, by reading the numbers and knowing what makes people stop scrolling. Below is one idea I'd love to explore with the team.</p>
+    <div class="chips">
+      <span class="chip">BA Business Management, First Class · Graduated July 2026</span>
+    </div>
+  </header>
+
+  <section aria-labelledby="nums">
+    <h2 id="nums">What I've done</h2>
+    <div class="nums">
+      <div class="num"><strong>8+</strong><span>European markets in one localised Amazon campaign</span></div>
+      <div class="num"><strong>2x</strong><span>Viewership from Meta ad campaigns I ran</span></div>
+      <div class="num"><strong>15+</strong><span>Datasets turned into clear recommendations</span></div>
+      <div class="num"><strong>52k+</strong><span>People reached with zero ad spend</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="idea">
+    <h2 id="idea">A thought worth exploring</h2>
+    <div class="big-idea">
+      <p class="label">Food for thought · The first 30 days</p>
+      <h3>Help clients get an early win when they try a new product.</h3>
+      <p>When a client tries something new, the first few weeks often decide whether they keep using it. A short, data-led check-in in that window could help them see results sooner and stay with the product.</p>
+    </div>
+    <div class="plan">
+      <article class="step">
+        <p class="label">Could start</p>
+        <h3>Set it up right</h3>
+        <ul>
+          <li>Pick a few clients who have just started using a priority product.</li>
+          <li>Agree one clear goal with each, sized to their budget.</li>
+          <li>Check the setup is right from day one.</li>
+        </ul>
+      </article>
+      <article class="step">
+        <p class="label">Could learn</p>
+        <h3>Let the data decide</h3>
+        <ul>
+          <li>Review spend, impressions, ROI and campaign results each week.</li>
+          <li>Test different creative formats and see what performs.</li>
+          <li>Send a short report with one clear recommendation.</li>
+        </ul>
+      </article>
+      <article class="step">
+        <p class="label">Could grow</p>
+        <h3>A simple checklist</h3>
+        <ul>
+          <li>Turn what worked into a short checklist.</li>
+          <li>Share it with the team.</li>
+          <li>Reuse it with new clients across markets.</li>
+        </ul>
+      </article>
+    </div>
+    <div class="measure" aria-label="Metrics that could show if it works">
+      <span>Product adoption</span><span>Revenue growth</span><span>Campaign ROI</span><span>Client satisfaction</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="why">
+    <h2 id="why">Why me</h2>
+    <div class="why">
+      <article class="card">
+        <h3>I make decisions from data</h3>
+        <p>I read ad results, campaign data and impressions to decide what to scale and what to cut. My Meta ads doubled viewership, and I've turned 15+ datasets into clear recommendations for leadership.</p>
+        <p class="proof">2x ads · 15+ datasets · Excel and Power BI</p>
+      </article>
+      <article class="card">
+        <h3>I know Europe isn't one market</h3>
+        <p>At Amazon I adapted one campaign for 8+ European markets and kept the results in one view. The Europe and Israel region needs exactly that.</p>
+        <p class="proof">Amazon · 8+ markets</p>
+      </article>
+      <article class="card">
+        <h3>I look after clients day to day</h3>
+        <p>I've managed accounts for brands like Meta, Sony Sports and ESPN, run discovery calls, and turned outreach into demos and trials. I like being the person clients rely on.</p>
+        <p class="proof">Client success · Sales · Onboarding</p>
+      </article>
+      <article class="card">
+        <h3>I understand what makes creative work</h3>
+        <p>I design and localise campaigns, create motion graphics and build brand books. So when I recommend a creative change, I know what it takes to make it.</p>
+        <p class="proof">Motion graphics · Campaign design · Brand books</p>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <h2>Let's make it <span>trend.</span></h2>
+    <div class="contact">
+      <span id="email">dia.wagle@gmail.com</span>
+      <span>07355 604005</span>
+      <button type="button" id="copy-email">Copy email</button>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+document.getElementById('copy-email').addEventListener('click', function(){
+  var btn = this, el = document.getElementById('email');
+  function done(){ btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = 'Copy email'; }, 1600); }
+  function fallback(){ var r = document.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selected, press copy'; }
+  try { navigator.clipboard.writeText(el.textContent).then(done, fallback); } catch(e){ fallback(); }
+});
+</script>
+
+</body></html>
